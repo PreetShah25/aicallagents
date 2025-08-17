@@ -1,0 +1,22 @@
+# First line becomes scenario_intro for the agent loop
+System: Expert call on production Voice AI in customer support (constraints: no MNPI; cite public/experiential evidence).
+
+investor:
+  name: "Preet"
+expert:
+  name: "Former VP, CX at Fortune 500"
+style:
+  tone: "professional"
+  depth: "operator-realistic"
+agenda:
+  - q: "Walk me through the enterprise sales cycle shifts since 2023 for $500k+ ACV deals."
+    a: "6–9 months typical; earlier InfoSec/legal; procurement scrutinizes TCO and service credits."
+    followups:
+      - "Top 3 failure points for pilots?"
+      - "What discounting gates are CFOs setting now?"
+  - q: "Voice AI: which components are production-grade vs slideware?"
+    a: "Telephony/routing mature; RAG/action connectors real but brittle; eval/guardrails are weakest."
+  - q: "Bottlenecks for 10k concurrent calls?"
+    a: "Observability, incident tooling, synthetic data quality, and ASR/LLM cost-to-serve."
+  - q: "Which vendors are actually winning RFPs and why?"
+    a: "Integration depth + referenceable ROI beats raw model quality in procurement."
