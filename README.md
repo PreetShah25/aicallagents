@@ -2,7 +2,7 @@
 
 Advanced **AI-based expert call exchange** toolkit with *agents*, *GenAI integration*, offline **simulator**, **RAG** (document ingestion + retrieval), **compliance redaction**, and **structured notes**. Built to prototype Third Bridge–style calls with automated agenda planning, dynamic follow‑ups, and exportable notes.
 
-> ⚠️ **Compliance**: If you connect to real calls, ensure explicit consent, avoid MNPI, and comply with privacy laws in each jurisdiction.
+> ⚠️ **Compliance**: Not made for real calls (yet)
 
 ## Key Capabilities
 - **Agent loop**: `ModeratorAgent` (plans & probes), `ExpertAgent` (answers), `ComplianceAgent` (flags), `NotesAgent` (summarizes).
