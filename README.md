@@ -58,3 +58,45 @@ tests/
 ## Real-time Plumbing (future work)
 - Telephony (Twilio/WebRTC), streaming ASR (Whisper/Deepgram), streaming TTS.
 - Turn the agent loop into a real-time orchestration with partial summaries, handoff to researcher, and compliance gating.
+
+
+## Streamlit UI
+```bash
+streamlit run src/ace_pro/app/streamlit_app.py
+```
+
+## Exporters
+- Markdown (default): saved in the output folder.
+- Notion (skeleton): set `NOTION_TOKEN` and provide parent page ID
+```bash
+export NOTION_TOKEN=secret
+python -m ace_pro.cli export-notion out_agents/transcript.txt <parent_page_id> --title "AI Call Notes"
+```
+
+## Live Adapters (stubs)
+- Twilio: `src/ace_pro/live/twilio_adapter.py` (requires env and hosting a TwiML URL).
+- WebRTC: `src/ace_pro/live/webrtc_stub.py` (design placeholder).
+- ASR/TTS stubs: replace with your providers.
+
+## Advanced RAG
+Use `--adv` to signal advanced chunk/citation store. (Note: for simplicity the example uses a marker file.)
+
+
+## Docker
+```bash
+docker compose up --build
+# UI -> http://localhost:8501
+# API -> http://localhost:8000/health
+# Twilio demo server -> http://localhost:8001/health
+```
+
+## Twilio (demo)
+- Point a public URL (ngrok or your domain) to the `twilio` service `/voice` endpoint.
+- Use `/outbound` to initiate calls (requires env vars).
+
+## API
+- `POST /run-sim` { "scenario_text": "<yaml>" }
+- `POST /run-agents` { "intro": "System: ...", "turns": 4 }
+
+## Notebook
+Open `notebooks/ACE_Pro_Demo.ipynb` in VS Code or Jupyter and run all cells.
